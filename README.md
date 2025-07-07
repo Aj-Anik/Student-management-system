@@ -15,3 +15,4 @@ Simple user-friendly interface
 
 
 This project is ideal for learning CRUD operations, database connectivity, and building real-world administrative applications.
+
