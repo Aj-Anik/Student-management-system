@@ -34,6 +34,9 @@ int main()
     while (1)
     {
         int type;
+        printf("  ******************************\n\n");
+        printf("    Student Management System\n\n");
+        printf("  ******************************\n\n");
         printf("1.show all student information.\n");
         printf("2.add a student.\n");
         printf("3.delete a student.\n");
@@ -103,6 +106,7 @@ int main()
             }
             else
             {
+                system("cls");
                 for (int i = 0; i < nos; i++)
                 {
                     printf(" Student ID: %s\n", a[i].id);
@@ -143,7 +147,7 @@ int main()
             fclose(data);
 
             // ############## Taking new student info ##############
-
+            system("cls");
             struct Student temp;
 
             printf("Enter the id: \n");
@@ -158,7 +162,9 @@ int main()
             scanf("%lf", &temp.cgpa);
             printf("Enter the semister: \n");
             scanf("%d", &temp.sem);
-
+            
+            system("cls");
+            printf("Sucessfully Added\n\n\n");
             a[nos] = temp;
             nos++;
 
@@ -287,6 +293,7 @@ int main()
             /// 2.update info in the array
 
             char id[100];
+            system("cls");
             printf("Enter ID: ");
             scanf("%s", id);
 
@@ -302,7 +309,7 @@ int main()
             }
             if (loc == -1)
             {
-                printf("ID not found\n");
+                printf("ID not found\n\n\n\n");
                 continue;
             }
 
@@ -363,6 +370,7 @@ int main()
                 double total;
                 scanf("%lf", &total);
             }
+            system("cls");
 
             /// 3. Write Student array content to the file
             data = fopen("data.txt", "w");
@@ -383,6 +391,7 @@ int main()
                 }
             }
             fclose(data);
+            printf("Sucessfully Updated\n\n\n\n");
         }
     }
 
